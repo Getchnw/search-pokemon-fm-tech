@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+
+  /* แก้ปัญหาหลัก: ลงทะเบียนคลาส border-border ให้ระบบ shadcn/ui รู้จัก */
+  --color-border: #e2e8f0;              /* Slate 200 */
+  --color-popover: #ffffff;             /* ข้อมูลพื้นหลังกล่องแจ้งเตือน/ป็อปอัป */
+  --color-popover-foreground: #0f172a;  /* สีข้อความด้านในกล่องแจ้งเตือน */
+  --radius: 0.5rem;                     /* ส่วนโค้งมนของกล่อง */
+  
+  /* โทนสีหลักของแอปพลิเคชัน (Brand Colors) */
+  --color-brand-primary: #2563eb;       /* Blue 600 - ใช้กับปุ่มหลัก, ลิงก์ */
+  --color-brand-secondary: #4f46e5;     /* Indigo 600 - ใช้ไฮไลท์, ไล่เฉดสี (Gradient) */
+  --color-brand-accent: #f59e0b;        /* Amber 500 - ใช้กับสายฟ้า ท่าโจมตี หรือจุดสนใจ */
+
+  /* สีพื้นหลังและกรอบวัตถุ (Surface & Borders) */
+  --color-ui-bg: #f8fafc;               /* Slate 50 - สีพื้นหลังเว็บหลัก */
+  --color-ui-surface: #ffffff;          /* White - สีพื้นหลังของการ์ด, Header, กล่องข้อมูล */
+  --color-ui-border: #e2e8f0;           /* Slate 200 - เส้นขอบตัดแบ่งสัดส่วน */
+
+  /* สีตัวอักษรเพื่อลำดับความสำคัญ (Typography) */
+  --color-text-main: #0f172a;           /* Slate 900 - ตัวหนา, หัวข้อหลัก (Heading) */
+  --color-text-muted: #475569;          /* Slate 600 - เนื้อหาทั่วไป, รายละเอียด */
+  --color-text-disabled: #94a3b8;       /* Slate 400 - ตัวหนังสือจางๆ, เลขลำดับ #001 */
+
+  /* สีสถานะระบบ (System Status) */
+  --color-status-error: #dc2626;        /* Red 600
+  --color-status-error-bg: #fef2f2;     /* Red 50
+  --color-status-success: #16a34a;      /* Green 600
+  --color-status-success-bg: #f0fdf4;   /* Green 50
+  
+  /* สีประจำธาตุของโปเกมอน  */
+  --color-type-grass: #10b981;     /* Emerald 500 */
+  --color-type-poison: #a855f7;    /* Purple 500 */
+  --color-type-fire: #f97316;      /* Orange 500 */
+  --color-type-water: #3b82f6;     /* Blue 500 */
+  --color-type-flying: #818cf8;    /* Indigo 400 */
+  --color-type-bug: #84cc16;       /* Lime 500 */
+  --color-type-normal: #9ca3af;    /* Gray 400 */
+  --color-type-electric: #facc15;  /* Yellow 400 */
+  --color-type-ground: #d97706;    /* Amber 600 */
+  --color-type-fairy: #f472b6;     /* Pink 400 */
+  --color-type-psychic: #de627b;    /* Rose 500 */
+  --color-type-fighting: #b91c1c;   /* Red 700 */
+  --color-type-rock: #78716c;       /* Stone 500 */
+  --color-type-ghost: #6d28d9;      /* Violet 700 */
+  --color-type-ice: #22d3ee;        /* Cyan 400 */
+  --color-type-dragon: #1d4ed8;     /* Blue 700 */
+}
+
+html,
+body {
+  background-color: var(--color-ui-bg);
+  color: var(--color-text-main);
+}

@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import { Toaster } from "@/components/ui/sonner";
+import { ApolloGraphQLProvider } from "../providers/ApolloGraphQLProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,16 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
+        <ApolloGraphQLProvider>
+          <Header />
+          <main className="flex-grow container mx-auto px-4 py-8 max-w-7xl">
+            {children}
+          </main>
+          <Footer />
+          <Toaster />
+        </ApolloGraphQLProvider>
+      </body>
     </html>
   );
 }
