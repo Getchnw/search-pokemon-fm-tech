@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import FilterButton from "../shared/FilterButton";
 import SearchBar from "../shared/SearchBar";
 
@@ -7,10 +8,16 @@ const Header = () => {
       <h1 className="text-xl font-bold bg-linear-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">
         Pokémon Search
       </h1>
-      <div className="flex gap-1">
-        <SearchBar />
-        <FilterButton />
-      </div>
+      <Suspense
+        fallback={
+          <div className="h-9 w-48 bg-slate-100 animate-pulse rounded-md" />
+        }
+      >
+        <div className="flex gap-2 w-full sm:w-auto justify-end">
+          <SearchBar />
+          <FilterButton />
+        </div>
+      </Suspense>
     </div>
   );
 };
